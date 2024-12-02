@@ -12,14 +12,14 @@
         {
             "kind": "main",
             "tag": "com.Carmario24.Custom-Widgets-Test.blame.main.BarChartWidget",
-            "url": "https:\/\/cdn.jsdelivr.net\/gh\/SAP-Custom-Widget\/CircleProgressBarWidget@1.0.0\/CircleProgressBarWidget.js",
+            "url": "/main.js",
             "integrity": "",
             "ignoreIntegrity": true
         },
         {
             "kind": "builder",
-            "tag": "com-rohitchouhan-sap-circleprogressbarwidget-builder",
-            "url": "https:\/\/cdn.jsdelivr.net\/gh\/SAP-Custom-Widget\/CircleProgressBarWidget@1.0.0\/CircleProgressBarWidget_Builder.js",
+            "tag": "com.Carmario24.Custom-Widgets-Test.blame.main.BarChartWidget",
+            "url": "/main.js",
             "integrity": "",
             "ignoreIntegrity": true
         }
