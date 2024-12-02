@@ -11,7 +11,7 @@
     "webcomponents": [
         {
             "kind": "main",
-            "tag": "com-rohitchouhan-sap-circleprogressbarwidget",
+            "tag": "com.Carmario24.Custom-Widgets-Test.blame.main.BarChartWidget",
             "url": "https:\/\/cdn.jsdelivr.net\/gh\/SAP-Custom-Widget\/CircleProgressBarWidget@1.0.0\/CircleProgressBarWidget.js",
             "integrity": "",
             "ignoreIntegrity": true
