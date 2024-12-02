@@ -1,99 +1,61 @@
 {
-    "id": "com.Carmario24.Custom-Widgets-Test.blame.main.BarChartWidget",
-    "version": "1.0.0",
-    "name": "Bar Chart Widget",
-    "description": "SAC Bar Chart Custom WIdget",
-    "newInstancePrefix": "BarChartWidget",
-    "vendor": "Mario",
-    "eula": "",
-    "license": "",
-    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAABACAYAAABP97SyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAwUlEQVRoge3XwQ3CMAxGYRsxDXCDgWANFugYTMStmccsQMnBRO4fve8aRc1TI1kxA1DJqw/Qc70vzd1O39bCor1fz8uv/Ycxx/qfrTgzMzc/9/bvPjCLQHUEqiNQHYHqCFRHoLrpA4+jP5B9z2UN/4PZ91zW9FeUQHUEqps+sDsHq+dYVvcPVs+xrOmvKIHqCFRHoDoC1RGojkB1BKojUB2B6ghU1w0Mi7a5FrbufT+AWn57LFF9iJEYE+qmDwRQ6wO/gymA985iUgAAAABJRU5ErkJggg==",
-    "webcomponents": [
-        {
-            "kind": "main",
-            "tag": "com.Carmario24.Custom-Widgets-Test.blame.main.BarChartWidget",
-            "url": "/main.js",
-            "integrity": "",
-            "ignoreIntegrity": true
-        },
-        {
-            "kind": "builder",
-            "tag": "com.Carmario24.Custom-Widgets-Test.blame.main.BarChartWidget",
-            "url": "/main.js",
-            "integrity": "",
-            "ignoreIntegrity": true
-        }
-    ],
-    "properties": {
-        "percentage": {
-            "description": "Percentage",
-            "type": "integer",
-            "default": 75
-        },
-        "barColor": {
-            "description": "Bar Color",
-            "type": "string",
-            "default": "#03ff4f"
-        },
-        "emptyBarColor": {
-            "description": "Empty Bar Color",
-            "type": "string",
-            "default": "#ededed"
-        }
-    },
-    "methods": {
-        "setPercentage": {
-            "description": "Set Percentage",
-            "parameters": [
-                {
-                    "name": "percentage",
-                    "type": "integer",
-                    "description": "Percentage"
-                }
-            ],
-            "body": "this.percentage = percentage;"
-        },
-        "getPercentage": {
-            "returnType": "integer",
-            "description": "Return Percentage",
-            "body": "return this.percentage;"
-        },
-        "setBarColor": {
-            "description": "Set Bar Color",
-            "parameters": [
-                {
-                    "name": "barColor",
-                    "type": "string",
-                    "description": "Bar Color"
-                }
-            ],
-            "body": "this.barColor = barColor;"
-        },
-        "getBarColor": {
-            "returnType": "string",
-            "description": "Return Bar Color",
-            "body": "return this.barColor;"
-        },
-        "setEmptyBarColor": {
-            "description": "Set Empty Bar Color",
-            "parameters": [
-                {
-                    "name": "emptyBarColor",
-                    "type": "string",
-                    "description": "Empty Bar Color"
-                }
-            ],
-            "body": "this.emptyBarColor = emptyBarColor;"
-        },
-        "getEmptyBarColor": {
-            "returnType": "string",
-            "description": "Return Empty Bar Color",
-            "body": "return this.emptyBarColor;"
-        }
-    },
-    "events": {
-        "onClick": {
-            "description": "User Clicked."
-        }
+  "version": "1.0",
+  "chartType": "Bar",
+  "chartTitle": "Sales by Region",
+  "dataSource": {
+    "data": [
+      { "Region": "North America", "Sales": 120000 },
+      { "Region": "Europe", "Sales": 95000 },
+      { "Region": "Asia", "Sales": 105000 },
+      { "Region": "South America", "Sales": 60000 },
+      { "Region": "Africa", "Sales": 35000 }
+    ]
+  },
+  "dimensions": [
+    {
+      "name": "Region",
+      "type": "Dimension"
     }
+  ],
+  "measures": [
+    {
+      "name": "Sales",
+      "type": "Measure",
+      "aggregation": "Sum"
+    }
+  ],
+  "visualization": {
+    "type": "Bar",
+    "layout": {
+      "orientation": "Vertical", 
+      "axis": {
+        "x": {
+          "label": "Region",
+          "color": "#000000"
+        },
+        "y": {
+          "label": "Sales",
+          "color": "#0066CC"
+        }
+      }
+    },
+    "colors": {
+      "bar": "#4CAF50",
+      "axis": "#FF9800",
+      "label": "#000000"
+    },
+    "tooltips": {
+      "enabled": true,
+      "format": "Currency"
+    }
+  },
+  "advancedOptions": {
+    "barWidth": "10",
+    "borderRadius": "5",
+    "legendPosition": "Top",
+    "gridLines": {
+      "show": true,
+      "color": "#CCCCCC"
+    }
+  }
 }
